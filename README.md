@@ -75,11 +75,14 @@ If you use or modify this code in your research, please cite:
 *CSS Nonbinarizer: A General Tool for Non-binary Quantum LDPC Codes*,  
 Institute of Science Tokyo, 2025.
 
+Systematic Non-Binary Extension of LDPC-CSS Codes Preserving Orthogonality
+Kenta Kasai
+https://arxiv.org/abs/2510.25583
+
 Quantum error correction near the coding theoretical bound
 Daiki Komoto and Kenta Kasai
 npj Quantum Information (2025)
 https://www.nature.com/articles/s41534-025-01090-1
-
 ---
 
 ## 📂 File Structure
