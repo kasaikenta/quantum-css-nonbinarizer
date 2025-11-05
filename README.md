@@ -1,0 +1,108 @@
+# CSS Nonbinarizer
+
+A general **non-binarization tool** for CSS-type quantum LDPC codes.  
+It converts binary parity-check matrices (H_X, H_Z) into non-binary exponent matrices (C_gamma, D_delta) over GF(q) by solving  
+the 4-term modular constraints using **Smith Normal Form over ℤ/(q−1)**.
+
+---
+
+## ✨ Features
+
+- Compute Smith Normal Form safely (integer-only)
+- Solve the modular linear system A z ≡ 0 (mod q−1)
+- Generate non-binary exponent tables C_gamma, D_delta
+- Verify the 4-term commutation constraints automatically
+- Visualize binary/non-binary matrices with matplotlib
+- Export LaTeX examples
+
+---
+
+## 🧠 Theoretical background
+
+For CSS-type quantum LDPC codes:
+H_X H_Z^T = 0 (mod 2)
+
+This script generalizes the commutation condition to the non-binary case:
+c(i,j) - c(i,j') + d(i',j) - d(i',j') ≡ 0 (mod q−1)
+
+and finds exponent assignments over ℤ/(q−1) that satisfy all such equations.
+
+---
+
+## ⚙️ Requirements
+
+Python ≥ 3.10  
+and the following packages:
+
+```
+pip install numpy matplotlib
+```
+
+---
+
+## 🚀 Usage
+
+```
+python3 CSS-nonbinarizer.py
+```
+
+This produces:
+- Console output showing all c(i,j) and d(i',j)
+- Example LaTeX file: example_output.tex
+- Visualization images: HX.png, HZ.png, C_gamma.png, D_delta.png
+
+---
+
+## 🧩 Example Output
+
+=== Non-binary 4-term check ===
+#Checked: 16, #Violations: 0
+
+=== Non-binary solution (explicit c(i,j), d(i',j)) ===
+(mod 255)
+c(0,0) = 123
+d(0,0) = 77
+...
+✓ Reproducibility test completed under unified seed.
+
+---
+
+## 📘 Citation
+
+If you use or modify this code in your research, please cite:
+
+**Kenta Kasai**,  
+*CSS Nonbinarizer: A General Tool for Non-binary Quantum LDPC Codes*,  
+Institute of Science Tokyo, 2025.
+
+Quantum error correction near the coding theoretical bound
+Daiki Komoto and Kenta Kasai
+npj Quantum Information (2025)
+https://www.nature.com/articles/s41534-025-01090-1
+
+---
+
+## 📂 File Structure
+
+```
+quantum-css-nonbinarizer/
+│
+├── CSS-nonbinarizer.py      # main script
+├── README.md                # this file
+├── example_output.tex       # generated sample
+└── *.png                    # generated figures
+```
+
+---
+
+## 🧾 License
+
+MIT License
+
+Copyright (c) 2025 Kenta Kasai
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software...
